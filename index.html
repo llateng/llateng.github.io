@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type=image/jpg href="buddha.png">
+    <title>Losel Lateng</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+      @font-face {
+            font-family: 'Norlha';
+            src: url('Norlha.otf') format('opentype');
+            font-weight: normal;
+            font-style: italic;
+            font-display: swap;
+      }
+      
+      body {
+        background-color: #492128;
+        font-family:'Norlha', sans-serif;
+        color: #A4BCC8;
+      }
+      
+      .content-section{
+        animation: fadeIn 0.35s ease;
+      }
+      @keyframes fadeIn{
+        from {opacity: 0; transform: translateY(8px);}
+        to { opacity:1; transform: translateY(0); }
+      }
+    </style> 
+  </head>
+  
+  <body class="min-h-screen relative">
+    <!-- NAVIGATION --> 
+    <nav class="absolute top-6 left-6 md:top-8 md:left-8 z-10"> 
+      <div class="flex flex-wrap gap-x-5 gap-y-2 font-'Norlha' text-xs md:text-sm">
+      
+        <button onclick="showHome()" class="nav-btn hover:text-#687390"> home </button>
+        
+        <button onclick="showSection('about-me')" class="nav-btn hover:text-#687390"> about me </button>
+        
+        <button onclick="showSection('portfolio')" class="nav-btn hover:text-#687390" > portfolio </button> 
+        
+        <button onclick="showSection('interests')" class="nav-btn hover:text-#687390" > pastimes </button> 
+        
+        <button onclick="showSection('contact')" class="nav-btn hover:text-#687390" > contact me </button>
+      </div>
+    </nav>
+  
+  <main id="home" class="min-h-screen flex items-center justify-center">
+      <!-- CENTER NAME -->
+      <div class="text-center py-6 px-4">
+        <h1 id="site-title" class="text-4xl md:text-6xl font-'Norlha' tracking-tight">
+          Losel Lateng
+        </h1>
+      </div>
+  </main>
+    
+    <section id="about-me" class="content-section hidden max-w-4xl mx-auto px-6 pt-28 pb-16 text-left">
+      
+    <h2 class="font-'Norlha' text-xs text-neutral-500 uppercase tracking-widest mb-8">
+      01 about me
+    </h2>
+    
+    <!-- 2-Column Grid Layout -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      
+      <!-- Left Column: Image -->
+      <div>
+        <img src="collage/me.JPG" alt="Losel Lateng" class="w-full rounded-lg object-cover">
+      </div>
+      
+      <!-- Right Column: Text -->
+      <div>
+        <p class="text-sm md:text-base leading-7 text-[#A4BCC8]"> 
+          Hey, I'm Losel! I'm a Junior studying Computer Science at Stony Brook University with an interest in Artificial Intelligence and Data Science. I have experience building ML models, IT, and data analytics. <br> Outside of CS, I am passionate about Tibetan history and culture. I also grew up competitively swimming and still compete with SBU Club Swim on campus. 
+        </p>
+      </div>
+      
+    </div>
+  </section>
+      
+    <section id="portfolio" class="content-section hidden max-w-4xl mx-auto px-6 pt-28 pb-16 text-left">
+  
+  <!-- Main Section Title -->
+  <h2 class="font-'Norlha' text-xs text-neutral-500 uppercase tracking-widest mb-10">
+    02 portfolio
+  </h2>
+
+  <!-- ================= EXPERIENCE SECTION ================= -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+      
+      <!-- Left Column: Section Title -->
+      <div class="md:col-span-1">
+        <h3 class="text-lg font-semibold text-neutral-200">Experience</h3>
+      </div>
+      
+      <!-- Right Column: All Experience Items Stacked Together -->
+      <div class="md:col-span-3 space-y-8">
+        
+        <div>
+          <h4 class="text-base md:text-lg font-semibold text-neutral-100">
+            Simons Center for Geometry and Physics
+          </h4>
+          <h5 class="text-sm font-medium text-neutral-300 mb-2">Student Assistant</h5>
+          <p class="text-sm md:text-base leading-relaxed">
+            At the Simons Center, I assist administrative and IT operations with user access management and database maintenance. I also operate AV systems, presentation software, and recording equipment for academic talks and workshops, resolving any technical issues to ensure events run smoothly.
+          </p>
+        </div>
+    
+        <div>
+          <h4 class="text-base md:text-lg font-semibold text-neutral-100">
+            Himalayan Student Association
+          </h4>
+          <h5 class="text-sm font-medium text-neutral-300 mb-2">Fundraising Chair</h5>
+          <p class="text-sm md:text-base leading-relaxed ">
+            As chair, I led a team of 7 representatives in planning and executing fundraisers to support club initiatives. I managed sales operations, product pricing, and tabling schedules. During high-volume campus lifetime events, I oversaw on-site fundraising efforts regarding marketing and food preparation.
+          </p>
+        </div>
+    
+      </div>
+    </div>
+          
+        <!-- ================= SKILLS SECTION ================= -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+          <!-- Left Column -->
+          <div class="md:col-span-1">
+            <h3 class="text-lg font-semibold text-neutral-200">Skills &amp; Tools</h3>
+          </div>
+          
+          <!-- Right Column -->
+          <div class="md:col-span-3">
+            <p class="text-sm md:text-base leading-7 ">
+              <strong class="font-bold text-neutral-100">Languages:</strong> Java, Python, C, R, HTML/CSS<br>
+              <strong class="font-bold text-neutral-100">ML/Data:</strong> Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn<br>
+              <strong class="font-bold text-neutral-100">Tools:</strong> GitHub, Google Workspace, Microsoft 365, LaTeX
+            </p>
+          </div>
+        </div>
+      
+        <!-- ================= PROJECTS SECTION ================= -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <!-- Left Column -->
+          <div class="md:col-span-1">
+            <h3 class="text-lg font-semibold text-neutral-200">Projects</h3>
+          </div>
+          
+          <!-- Right Column -->
+          <div class="md:col-span-3">
+            <h4 class="text-base md:text-lg font-semibold text-neutral-100 mb-1">
+              Hotel Booking Cancellation Predictor
+            </h4>
+            <p class="text-sm md:text-base leading-relaxed">
+              I analyzed hotel data to build logistic regression, random forest, and decision tree classifier models to identify and predict hotel cancellation trends. 
+            </p>
+            <a class="underline hover:text-[#687390]" href="project.pdf" target="_blank" rel="noopener noreferrer">View My Presentation</a>
+          </div>
+        </div>
+      
+      </section>
+      
+      <section id="interests" class="content-section hidden max-w-6xl mx-auto px-6 pt-28 pb-16 text-left">
+      <h2 class="font-'Norlha' text-xs text-neutral-500 uppercase tracking-widest mb-8">
+        03 pastimes
+      </h2>
+ 
+      <div class="grid grid-cols-1 md:grid-cols-[1.6fr_1fr] gap-x-10 gap-y-12">
+ 
+        <!-- Large painting -->
+        <figure>
+          <img src="collage/flowers.png" alt="Watercolor of flowers by Lourdes Sanchez" class="w-full">
+          <figcaption class="mt-3 text-xs md:text-sm leading-6 text-center">
+            <a class="hover:text-[#687390]" href="https://www.artsy.net/artwork/lourdes-sanchez-touch-down-lift-off-with-amaryllis-water-lilies-jack-in-the-pulpit-and-other-relations" target="_blank" rel="noopener noreferrer" >
+              Some art I love:<br> Touch down; lift off by Lourdes Sanchez
+            </a>
+          </figcaption>
+        </figure>
+ 
+        <!-- Right column: movie + book -->
+        <div class="flex flex-col gap-10">
+          <figure>
+            <img src="collage/momola.jpeg" alt="Still from Pride and Prejudice (2005)" class="w-full">
+            <figcaption class="mt-3 text-xs md:text-sm leading-6 text-center">
+              I love traveling and exploring new places. Last summer I went back to San Francisco with my grandmother! 
+            </figcaption>
+          </figure>
+ 
+          <figure class="grid grid-cols-2 gap-5 items-center">
+            <img src="collage/mempolice.jpg" alt="Cover of The Memory Police" class="w-full">
+            <figcaption class="text-xs md:text-sm leading-6 text-center">
+              currently reading... The Memory Police by Yoko Ogawa
+            </figcaption>
+          </figure>
+        </div>
+ 
+        <!-- Bottom row: apron + statement
+        <figure class="md:col-span-2 grid grid-cols-1 md:grid-cols-[1fr_2.5fr] gap-10 items-center">
+          <img src="collage/apron.png" alt="Woven striped Tibetan apron" class="w-full">
+          <figcaption class="text-center">
+            <p class="text-base md:text-xl leading-8 md:leading-10">
+              The textile to the left is a apron worn by married Tibetan women 
+            </p>
+          </figcaption>
+        </figure> -->
+      </div>
+    </section>
+    
+    <section id="contact" class="content-section hidden max-w-xl mx-auto px-6 pt-28 pb-16 text-left">
+      <h2 class="font-'Norlha' text-xs text-neutral-500 uppercase tracking-widest mb-4">
+        04 contact me
+      </h2>
+      <p class="text-sm md:text-base leading-7">
+        <a class="underline hover:text-[#687390]" href="mailto:losellateng@gmail.com">Email</a><br>
+        <a class="underline hover:text-[#687390]" href="https://github.com/llateng" target="_blank" rel="noopener noreferrer">GitHub</a><br>
+        <a class="underline hover:text-[#687390]" href="https://linkedin.com/in/losel-lateng" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </p>
+    </section>
+    
+    <script>
+      const home = document.getElementById('home');
+      const sections = document.querySelectorAll('.content-section');
+ 
+      function showSection(sectionId) {
+        home.classList.add('hidden');
+        sections.forEach(section => section.classList.add('hidden'));
+ 
+        const target = document.getElementById(sectionId);
+        if (target) {
+          target.classList.remove('hidden');
+        }
+        window.scrollTo(0, 0);
+      }
+ 
+      function showHome() {
+        sections.forEach(section => section.classList.add('hidden'));
+        home.classList.remove('hidden');
+        window.scrollTo(0, 0);
+      }
+    </script>
+    
+  </body>
+</html>
